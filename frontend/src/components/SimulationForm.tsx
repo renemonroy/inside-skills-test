@@ -92,6 +92,10 @@ const SimulationForm: React.FC<SimulationFormProps> = ({ onSubmit }) => {
                 errors={errors}
               />
             </div>
+            <p className="mt-1 text-sm leading-6 text-gray-600">
+              *Each tube works for a random number of hours, between 100 and 200
+              before breaking.
+            </p>
           </fieldset>
         </div>
         <div className="mt-5 flex items-center justify-end gap-x-6">
