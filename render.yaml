@@ -5,7 +5,6 @@ services:
     env: docker
     dockerfilePath: ./backend/Dockerfile
     dockerContext: ./backend
-    port: 4567
 
   - type: web
     name: frontend
@@ -14,4 +13,3 @@ services:
     dockerfilePath: ./frontend/Dockerfile
     dockerContext: ./frontend
     # staticPublishPath: ./build
-    port: 8080
