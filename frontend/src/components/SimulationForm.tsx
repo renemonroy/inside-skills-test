@@ -69,7 +69,7 @@ const SimulationForm: React.FC<SimulationFormProps> = ({ onSubmit }) => {
             <legend className="text-sm font-semibold leading-6 text-gray-900">
               Fluorescent Tubes
             </legend>
-            <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 mt-5 mb-10">
+            <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 mt-5">
               <InputNumber
                 label="Units per Classroom"
                 placeholder="(4)"
@@ -92,9 +92,9 @@ const SimulationForm: React.FC<SimulationFormProps> = ({ onSubmit }) => {
                 errors={errors}
               />
             </div>
-            <p className="mt-1 text-sm leading-6 text-gray-600">
-              *Each tube works for a random number of hours, between 100 and 200
-              before breaking.
+            <p className="mt-2 text-sm leading-6 text-gray-600">
+              *In this simulation each tube works for a random number of hours,
+              between 100 and 200 before breaking.
             </p>
           </fieldset>
         </div>
