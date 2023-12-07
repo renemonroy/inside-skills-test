@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: backend
+    plan: free
+    env: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    port: 4567
+
+  - type: web
+    name: frontend
+    plan: free
+    env: docker
+    dockerfilePath: ./frontend/Dockerfile
+    dockerContext: ./frontend
+    # staticPublishPath: ./build
+    port: 8080
