@@ -2,14 +2,14 @@ import axios from "axios";
 import { SimulationData } from "../types/simulationData";
 import { FormData } from "../types/formData";
 
-const BASE_URL = process.env.BACKEND_URL || "http://localhost:4567";
+const BACKEND_URL = import.meta.env.BACKEND_URL || "http://localhost:4567";
 
 const simulationAPI = {
   simulate: async (params: FormData) => {
     const query = new URLSearchParams(
       params as unknown as Record<string, string>
     ).toString();
-    const response = await axios.get(`${BASE_URL}/simulate?${query}`);
+    const response = await axios.get(`${BACKEND_URL}/simulate?${query}`);
     return response.data as SimulationData;
   },
 };
