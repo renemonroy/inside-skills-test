@@ -2,7 +2,7 @@ import axios from "axios";
 import { SimulationData } from "../types/simulationData";
 import { FormData } from "../types/formData";
 
-const BACKEND_URL = import.meta.env.BACKEND_URL || "http://localhost:4567";
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:4567";
 
 const simulationAPI = {
   simulate: async (params: FormData) => {
