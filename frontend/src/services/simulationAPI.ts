@@ -2,7 +2,7 @@ import axios from "axios";
 import { SimulationData } from "../types/simulationData";
 import { FormData } from "../types/formData";
 
-const BASE_URL = "http://localhost:4567";
+const BASE_URL = process.env.BACKEND_URL || "http://localhost:4567";
 
 const simulationAPI = {
   simulate: async (params: FormData) => {
