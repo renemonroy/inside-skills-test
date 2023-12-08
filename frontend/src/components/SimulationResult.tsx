@@ -14,7 +14,7 @@ const SimulationResult: React.FC<SimulationResultProps> = ({ result }) => {
         Results
       </h3>
       <p className="mt-2 text-base leading-7 text-slate-700">
-        Based on the values you entered, here are the results.
+        Based on the values you entered, here are the results:
       </p>
       <div className="mt-5 grid gap-5 grid-cols-2">
         <div className="overflow-hidden rounded-lg bg-white px-4 py-5 shadow sm:p-6 mb-5">
