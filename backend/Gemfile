@@ -4,3 +4,7 @@ gem 'sinatra'
 gem 'sinatra-cors'
 gem 'json'
 gem 'puma'
+
+group :development, :test do
+  gem 'rspec'
+end
