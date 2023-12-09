@@ -7,4 +7,4 @@ RUN bundle install
 
 COPY . .
 
-CMD ["ruby", "simulation.rb"]
+CMD ["ruby", "app.rb"]
