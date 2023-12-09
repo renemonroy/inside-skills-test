@@ -15,7 +15,7 @@ const App: React.FC = () => {
     <div className="lg:flex lg:h-full lg:flex-col">
       <header className="flex items-center justify-between border-b border-gray-200 px-6 py-4 lg:flex-none">
         <h1 className="text-base font-semibold leading-6 text-gray-900">
-          Classroom Costs Simulator
+          Classroom Materials Budgeting
         </h1>
       </header>
       <main className="p-5 bg-gray-50 lg:flex lg:h-full lg:flex-col">
@@ -23,7 +23,7 @@ const App: React.FC = () => {
           <div className="flex-grow">
             <div className="max-w-xl px-5">
               <h2 className="text-base font-semibold leading-7 text-indigo-600">
-                Simulate
+                Simulator
               </h2>
               <p className="mt-4 text-4xl font-extrabold tracking-tight text-slate-900">
                 A simple guide to calculate the cost of replacing materials.
