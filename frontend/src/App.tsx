@@ -9,7 +9,7 @@ const materials = [{ id: 1, name: "Fluorescent Tubes" }];
 
 const App: React.FC = () => {
   const { simulate, result, loading, error } = useSimulation();
-  const onSubmit = (formData: FormData) => simulate(formData);
+  const onSubmit = (formData: FormData) => simulate.fluorescentTubes(formData);
 
   return (
     <div className="lg:flex lg:h-full lg:flex-col">

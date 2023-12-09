@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'json'
 
-get '/simulate' do
+get '/simulate/fluorescent-tubes' do
   months = params['months'].to_i
   weeks_per_month = params['weeks_per_month'].to_i
   days_per_week = params['days_per_week'].to_i

@@ -8,11 +8,11 @@ const useSimulation = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<Error | null>(null);
 
-  const simulate = async (formData: FormData) => {
+  const simulateFluorescentTubes = async (formData: FormData) => {
     setLoading(true);
     setError(null);
     try {
-      const data = await apiService.simulate(formData);
+      const data = await apiService.simulateFluorescentTubes(formData);
       setResult(data);
     } catch (err) {
       if (err instanceof Error) {
@@ -24,7 +24,14 @@ const useSimulation = () => {
     }
   };
 
-  return { simulate, result, loading, error };
+  return {
+    simulate: {
+      fluorescentTubes: simulateFluorescentTubes,
+    },
+    result,
+    loading,
+    error,
+  };
 };
 
 export default useSimulation;
