@@ -2,10 +2,12 @@ FROM node:latest
 
 WORKDIR /frontend
 
+EXPOSE 8080
+
 COPY package.json package-lock.json ./
 
-RUN npm install
+RUN npm install --silent
 
-COPY . .
+COPY . ./
 
 CMD ["npm", "run", "dev"]

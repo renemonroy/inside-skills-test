@@ -16,7 +16,7 @@ const SimulationForm: React.FC<SimulationFormProps> = ({ onSubmit }) => {
 
   return (
     <form
-      className="bg-white flex-grow shadow-sm ring-1 ring-gray-900/5 sm:rounded-xl md:col-span-2"
+      className="bg-white shadow-sm ring-1 ring-gray-900/5 sm:rounded-xl md:col-span-2"
       onSubmit={handleSubmit(onSubmit)}
     >
       <div className="px-4 py-6 sm:p-8">
