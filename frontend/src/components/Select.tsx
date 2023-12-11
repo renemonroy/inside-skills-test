@@ -2,16 +2,37 @@ import React, { Fragment, useState } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
 
+/**
+ * Interface for items in the selector list.
+ * -------------------------------------------------------------------------
+ * @typedef {Object} ISelectorList
+ * @property {number} id - Unique identifier for each item.
+ * @property {string} name - Display name for each item.
+ */
 interface ISelectorList {
   id: number;
   name: string;
 }
 
+/**
+ * Props for Select component.
+ * -------------------------------------------------------------------------
+ * @typedef {Object} SelectProps
+ * @property {ISelectorList[]} list - Array of items to be displayed in the dropdown.
+ */
 interface SelectProps {
   list: ISelectorList[];
 }
 
-const Select: React.FC<SelectProps> = ({ list }) => {
+/**
+ * A dropdown select component.
+ * -------------------------------------------------------------------------
+ * This component renders a list of items in a dropdown menu, allowing the user to select one.
+ * It uses Headless UI for accessibility and Tailwind CSS for styling.
+ * @param {SelectProps} props - Props for the component.
+ * @returns {JSX.Element} A styled dropdown select component.
+ */
+const Select: React.FC<SelectProps> = ({ list }): JSX.Element => {
   const [selected, setSelected] = useState(list[0]);
 
   return (

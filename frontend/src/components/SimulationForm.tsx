@@ -3,11 +3,27 @@ import { useForm } from "react-hook-form";
 import { FormData } from "../types/formData";
 import InputNumber from "./InputNumber";
 
+/**
+ * Props for SimulationForm component.
+ * -------------------------------------------------------------------------
+ * @typedef {Object} SimulationFormProps
+ * @property {(data: FormData) => void} onSubmit - Callback function to handle form submission.
+ */
 interface SimulationFormProps {
   onSubmit: (data: FormData) => void;
 }
 
-const SimulationForm: React.FC<SimulationFormProps> = ({ onSubmit }) => {
+/**
+ * A form component for simulating classroom operations.
+ * -------------------------------------------------------------------------
+ * This form captures various parameters needed for a classroom operation simulation.
+ * It uses react-hook-form for form handling and validation.
+ * @param {SimulationFormProps} props - Props for the component.
+ * @returns {JSX.Element} A form component for capturing simulation parameters.
+ */
+const SimulationForm: React.FC<SimulationFormProps> = ({
+  onSubmit,
+}): JSX.Element => {
   const {
     register,
     handleSubmit,

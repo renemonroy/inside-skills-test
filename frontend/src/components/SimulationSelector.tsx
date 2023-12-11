@@ -2,7 +2,16 @@ import Select from "./Select";
 
 const materials = [{ id: 1, name: "Fluorescent Tubes" }];
 
-const SimulationSelector: React.FC = () => {
+/**
+ * A component that renders a selection interface for the simulation.
+ * -------------------------------------------------------------------------
+ * This component provides a user interface for selecting materials to simulate.
+ * It uses the 'Select' component for rendering the dropdown menu. The purpose
+ * is to allow users to choose a material and then simulate the cost of replacing
+ * that material in a classroom setting.
+ * @returns {JSX.Element} A component that includes instructional text and a material selection dropdown.
+ */
+const SimulationSelector: React.FC = (): JSX.Element => {
   return (
     <div className="px-0 md:px-5">
       <h2 className="text-base font-semibold leading-7 text-indigo-600">

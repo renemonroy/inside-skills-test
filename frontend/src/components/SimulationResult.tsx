@@ -1,5 +1,13 @@
 import React from "react";
 
+/**
+ * Props for the SimulationResult component.
+ * -------------------------------------------------------------------------
+ * @typedef {Object} SimulationResultProps
+ * @property {Object} result - The results of the simulation.
+ * @property {number} result.total_tubes_replaced - Total number of tubes replaced in the simulation.
+ * @property {number} result.total_cost - Total cost incurred in the simulation.
+ */
 interface SimulationResultProps {
   result: {
     total_tubes_replaced: number;
@@ -7,7 +15,18 @@ interface SimulationResultProps {
   };
 }
 
-const SimulationResult: React.FC<SimulationResultProps> = ({ result }) => {
+/**
+ * A component to display the results of the simulation.
+ * -------------------------------------------------------------------------
+ * This component presents the total number of tubes replaced and the total cost
+ * based on the simulation input parameters. The results are displayed in a clear
+ * and concise format for easy understanding.
+ * @param {SimulationResultProps} props - Props for the component.
+ * @returns {JSX.Element} A component that displays the simulation results.
+ */
+const SimulationResult: React.FC<SimulationResultProps> = ({
+  result,
+}): JSX.Element => {
   return (
     <div>
       <h3 className="mt-2 text-2xl font-extrabold tracking-tight text-slate-900">
