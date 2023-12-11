@@ -35,8 +35,8 @@ const useSimulation = () => {
   };
 
   return {
-    simulate: {
-      fluorescentTubes: simulateFluorescentTubes,
+    simulator: {
+      simulateFluorescentTubes: simulateFluorescentTubes,
     },
     result,
     loading,

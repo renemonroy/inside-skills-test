@@ -6,8 +6,9 @@ import useSimulation from "./hooks/useSimulation";
 import { FormData } from "./types/formData";
 
 const App: React.FC = () => {
-  const { simulate, result, loading, error } = useSimulation();
-  const onSubmit = (formData: FormData) => simulate.fluorescentTubes(formData);
+  const { simulator, result, loading, error } = useSimulation();
+  const onSubmit = (formData: FormData) =>
+    simulator.simulateFluorescentTubes(formData);
 
   return (
     <div className="lg:flex lg:h-full lg:flex-col">
