@@ -6,6 +6,6 @@
  * @property {number} total_cost - Total cost incurred in the simulation.
  */
 export interface SimulationData {
-  total_tubes_replaced: number;
+  total_broken_tubes: number;
   total_cost: number;
 }

@@ -10,7 +10,7 @@ import React from "react";
  */
 interface SimulationResultProps {
   result: {
-    total_tubes_replaced: number;
+    total_broken_tubes: number;
     total_cost: number;
   };
 }
@@ -38,10 +38,10 @@ const SimulationResult: React.FC<SimulationResultProps> = ({
       <div className="mt-5 grid gap-5 grid-cols-2">
         <div className="overflow-hidden rounded-lg bg-white px-4 py-5 shadow sm:p-6 mb-5">
           <div className="truncate text-sm font-medium text-gray-500">
-            Total Tubes Replaced in a Year
+            Total Broken Tubes
           </div>
           <div className="mt-1 text-3xl font-semibold tracking-tight text-gray-900">
-            {result.total_tubes_replaced}
+            {result.total_broken_tubes}
           </div>
         </div>
         <div className="overflow-hidden rounded-lg bg-white px-4 py-5 shadow sm:p-6 mb-5">
